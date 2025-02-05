@@ -12,15 +12,14 @@ export const FORM_JSON = {
       {
         key: "business_type",
         type: "select",
-        label:
-          "What type of business do you own? (Options: Sole Proprietorship, Partnership, Corporation, LLC)",
+        label: "What type of business do you own?",
         options: ["Sole Proprietorship", "Partnership", "Corporation", "LLC"],
         required: true
       },
       {
         key: "pays_sales_tax",
         type: "boolean",
-        label: "Do you pay sales tax? (yes/no)",
+        label: "Do you pay sales tax?",
         required: true
       },
       {
@@ -49,7 +48,7 @@ export const FORM_JSON = {
       {
         key: "has_employees",
         type: "boolean",
-        label: "Do you have employees? (yes/no)",
+        label: "Do you have employees?",
         required: true
       },
       {
@@ -65,22 +64,19 @@ export const FORM_JSON = {
       {
         key: "confirm_information",
         type: "confirmation",
-        label:
-          "Here is the information I’ve collected so far. Do you confirm that the above information is correct? (yes/no)"
+        label: "Please confirm the information provided is correct."
       }
     ]
   }
 };
 
-export const QUESTION_PROMPT_TEMPLATE = `
-You are an intelligent surveyor chatbot guiding a user through a form.
+export const QUESTION_PROMPT_TEMPLATE = 
+`You are an intelligent surveyor chatbot guiding a user through a form.
 Please ask the following question:
-"{question}"
-`;
+"{question}"`;
 
-export const CONFIRM_PROMPT_TEMPLATE = `
-I have collected the following information so far:
+export const CONFIRM_PROMPT_TEMPLATE = 
+`I have collected the following information:
 {responses}
 
-Do you confirm that all of the information is correct? (yes/no)
-`;
+Please confirm this information is correct (yes/no):`;
